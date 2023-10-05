@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int senha_correta;
+    int senha_digitada;
+
+    printf(" Digite sua senha?\n\n");
+    scanf("%d", &senha_correta);
+    printf("Senha salva!\n\n");
+
+    while (1)
+    {
+        printf(" Digite sua senha para o acesso?\n\n");
+        scanf("%d", &senha_digitada);
+        if (senha_correta == senha_digitada)
+        {
+            printf(" Acesso liberado!\n");
+            break;
+        }
+        else
+        {
+            printf("Senha incorreta. Tente novamente.\n\n");
+        }
+    }
+
+    return 0;
+}
